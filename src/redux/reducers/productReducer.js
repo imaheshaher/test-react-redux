@@ -13,3 +13,13 @@ export const productReducer = (state=initialState,action) =>{
             return state;
     }
 }
+
+export const selectedProductReducer = (state={},action) =>{
+    switch (action.type) {
+        case ActionType.SELECTED_PRODUCT:
+            return {...state,...action.payload}
+    
+        default:
+            return state;
+    }
+}

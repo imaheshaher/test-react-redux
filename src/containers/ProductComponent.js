@@ -1,11 +1,13 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 function ProductComponent(props) {
     const products = useSelector((state) => state.allProducts.products); //it take argument state
     // const {id,title}=products[0]
     const renderList = products.map((product) => {
         return (
+            <Link to={`product/${product.id}`}>
             <div className="ui card">
                 <div className="image">
                     <img src={product.image} height="200" />
@@ -29,6 +31,7 @@ function ProductComponent(props) {
       </span>
                 </div>
             </div>
+            </Link>
         );
     })
     return (
