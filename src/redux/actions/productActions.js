@@ -13,4 +13,27 @@ export const selectedProduct = (product) =>{
     }
 }
 
+
+export const addTODOItem = (data) => {
+    
+    return {
+        type:ActionType.ADD_TODO,
+        payload:data
+    }
+}
+export const deleteTask = (data) => {
+    
+    return {
+        type:ActionType.REMOVE_TODO,
+        payload:data
+    }
+}
+
+export const updaateTODO = (data) => {
+    alert(data)
+    return {
+        type:"UPDATE_TASK",
+        payload:data
+    }
+}
 //action always return object key will type 
